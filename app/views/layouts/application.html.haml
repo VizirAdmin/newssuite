@@ -1,0 +1,14 @@
+!!!
+%html(lang='pt-BR')
+  %head
+    %meta(charset='utf-8')
+    %title News Suite
+
+    = stylesheet_link_tag :all, :cache => true
+
+  %body
+    = yield
+
+    %p#credit
+      <strong>Um projeto open-source desenvolvido por:</strong> #{link_to "Fabrício Ferrari de Campos", "http://twitter.com/fabricioffc"}.
+

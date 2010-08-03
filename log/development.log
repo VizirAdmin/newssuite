@@ -1,0 +1,738 @@
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (187.8ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `schema_migrations`[0m
+  [4;35;1mSQL (368.9ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateFeedEntries (20100803025239)
+  [4;36;1mSQL (185.3ms)[0m   [0;1mCREATE TABLE `feed_entries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `author` varchar(255), `summary` varchar(255), `url` varchar(255), `published_at` datetime, `guid` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (67.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100803025239')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (10.3ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `feed_entries`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `feed_entries`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mFeedEntry Load (0.5ms)[0m   [0;1mSELECT `feed_entries`.id FROM `feed_entries` WHERE (`feed_entries`.`guid` = 'tag:google.com,2005:reader/item/554c517506fa9139') LIMIT 1[0m
+  [4;35;1mFeedEntry Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeedEntry Create (0.4ms)[0m   [0mINSERT INTO `feed_entries` (`created_at`, `title`, `author`, `guid`, `updated_at`, `url`, `summary`, `published_at`) VALUES('2010-08-03 03:02:18', 'An idea about testing inner functions in Clojure', 'Brian Marick', 'tag:google.com,2005:reader/item/554c517506fa9139', '2010-08-03 03:02:18', 'http://www.exampler.com/blog/2010/08/02/an-idea-about-testing-inner-functions-in-clojure/', NULL, '2010-08-02 18:39:45')[0m
+  [4;36;1mSQL (105.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mFeedEntry Load (0.4ms)[0m   [0mSELECT `feed_entries`.id FROM `feed_entries` WHERE (`feed_entries`.`guid` = 'tag:google.com,2005:reader/item/11820a4c0e7b7bc9') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeedEntry Create (0.3ms)[0m   [0mINSERT INTO `feed_entries` (`created_at`, `title`, `author`, `guid`, `updated_at`, `url`, `summary`, `published_at`) VALUES('2010-08-03 03:02:18', 'Where is the best place to look for testing jobs in Sussex?', 'Michael Pinnell', 'tag:google.com,2005:reader/item/11820a4c0e7b7bc9', '2010-08-03 03:02:18', 'http://www.softwaretestingclub.com/xn/detail/751045:Topic:89376', NULL, '2010-08-02 16:48:30')[0m
+  [4;36;1mSQL (91.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mFeedEntry Load (0.4ms)[0m   [0mSELECT `feed_entries`.id FROM `feed_entries` WHERE (`feed_entries`.`guid` = 'tag:google.com,2005:reader/item/d5e93ca9655b85a5') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeedEntry Create (0.3ms)[0m   [0mINSERT INTO `feed_entries` (`created_at`, `title`, `author`, `guid`, `updated_at`, `url`, `summary`, `published_at`) VALUES('2010-08-03 03:02:18', 'Exploring scripted tests', 'Flavio Beck', 'tag:google.com,2005:reader/item/d5e93ca9655b85a5', '2010-08-03 03:02:18', 'http://www.softwaretestingclub.com/xn/detail/751045:Topic:89372', NULL, '2010-08-02 16:17:28')[0m
+  [4;36;1mSQL (101.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mFeedEntry Load (0.4ms)[0m   [0mSELECT `feed_entries`.id FROM `feed_entries` WHERE (`feed_entries`.`guid` = 'tag:google.com,2005:reader/item/01af0d6efb7172fa') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeedEntry Create (10.6ms)[0m   [0mINSERT INTO `feed_entries` (`created_at`, `title`, `author`, `guid`, `updated_at`, `url`, `summary`, `published_at`) VALUES('2010-08-03 03:02:18', 'Test case management tool Free/cheap', 'Jamie Gagnon', 'tag:google.com,2005:reader/item/01af0d6efb7172fa', '2010-08-03 03:02:18', 'http://www.softwaretestingclub.com/xn/detail/751045:Topic:89362', NULL, '2010-08-02 15:16:01')[0m
+  [4;36;1mSQL (107.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mFeedEntry Load (0.4ms)[0m   [0mSELECT `feed_entries`.id FROM `feed_entries` WHERE (`feed_entries`.`guid` = 'tag:google.com,2005:reader/item/d65229ed161ac46f') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeedEntry Create (0.3ms)[0m   [0mINSERT INTO `feed_entries` (`created_at`, `title`, `author`, `guid`, `updated_at`, `url`, `summary`, `published_at`) VALUES('2010-08-03 03:02:19', 'The Sine of Death by UI Test Automation', 'gojko', 'tag:google.com,2005:reader/item/d65229ed161ac46f', '2010-08-03 03:02:19', 'http://gojko.net/2010/07/29/the-sine-of-death-by-ui-test-automation/', NULL, '2010-07-29 22:37:42')[0m
+  [4;36;1mSQL (70.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mFeedEntry Load (0.4ms)[0m   [0mSELECT `feed_entries`.id FROM `feed_entries` WHERE (`feed_entries`.`guid` = 'tag:google.com,2005:reader/item/9123b67103061a1d') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeedEntry Create (0.3ms)[0m   [0mINSERT INTO `feed_entries` (`created_at`, `title`, `author`, `guid`, `updated_at`, `url`, `summary`, `published_at`) VALUES('2010-08-03 03:02:19', 'Invoking System.gc() can have serious impact', 'Fabian Lange', 'tag:google.com,2005:reader/item/9123b67103061a1d', '2010-08-03 03:02:19', 'http://feedproxy.google.com/~r/codecentric_en/~3/JCY6C-QnHyw/', NULL, '2010-08-02 14:07:09')[0m
+  [4;36;1mSQL (67.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mFeedEntry Load (0.4ms)[0m   [0mSELECT `feed_entries`.id FROM `feed_entries` WHERE (`feed_entries`.`guid` = 'tag:google.com,2005:reader/item/cfee7a97dde8de95') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeedEntry Create (0.3ms)[0m   [0mINSERT INTO `feed_entries` (`created_at`, `title`, `author`, `guid`, `updated_at`, `url`, `summary`, `published_at`) VALUES('2010-08-03 03:02:19', 'A Smattering of Selenium #22', 'agoucher', 'tag:google.com,2005:reader/item/cfee7a97dde8de95', '2010-08-03 03:02:19', 'http://feedproxy.google.com/~r/Selenium/~3/jnpVD7dY7Ts/', NULL, '2010-08-02 13:12:03')[0m
+  [4;36;1mSQL (71.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mFeedEntry Load (0.4ms)[0m   [0mSELECT `feed_entries`.id FROM `feed_entries` WHERE (`feed_entries`.`guid` = 'tag:google.com,2005:reader/item/ae257c9d0863ed4c') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeedEntry Create (0.4ms)[0m   [0mINSERT INTO `feed_entries` (`created_at`, `title`, `author`, `guid`, `updated_at`, `url`, `summary`, `published_at`) VALUES('2010-08-03 03:02:19', 'A Smattering of Selenium #22', 'agoucher', 'tag:google.com,2005:reader/item/ae257c9d0863ed4c', '2010-08-03 03:02:19', 'http://seleniumhq.wordpress.com/2010/08/02/a-smattering-of-selenium-22/', NULL, '2010-08-02 13:12:03')[0m
+  [4;36;1mSQL (70.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mFeedEntry Load (0.4ms)[0m   [0mSELECT `feed_entries`.id FROM `feed_entries` WHERE (`feed_entries`.`guid` = 'tag:google.com,2005:reader/item/db261eaed7f0683e') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeedEntry Create (0.4ms)[0m   [0mINSERT INTO `feed_entries` (`created_at`, `title`, `author`, `guid`, `updated_at`, `url`, `summary`, `published_at`) VALUES('2010-08-03 03:02:19', 'Software Testing what is defect', 'admin', 'tag:google.com,2005:reader/item/db261eaed7f0683e', '2010-08-03 03:02:19', 'http://qalibrary.com/testing/software-testing-what-is-defect/', 'www.SoftwareTestingCareer.ComOnline Live Webinar on 17th January 2010 visit http &amp; register for that to get access to 30 SOftware Testing minute Video &amp; PDFs for free Why System Testing is important? System Testing is a crucial step in Quality Management Process. In the Software Development Life cycle System Testing is the first level where the [...]<p><a href=\"http://qalibrary.com/testing/software-testing-what-is-defect/\">Software Testing what is defect</a> is a post from: <a href=\"http://qalibrary.com\">QA Library</a></p>', '2010-08-01 23:52:22')[0m
+  [4;36;1mSQL (63.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mFeedEntry Load (0.4ms)[0m   [0mSELECT `feed_entries`.id FROM `feed_entries` WHERE (`feed_entries`.`guid` = 'tag:google.com,2005:reader/item/35c70ad8da741ebd') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeedEntry Create (0.3ms)[0m   [0mINSERT INTO `feed_entries` (`created_at`, `title`, `author`, `guid`, `updated_at`, `url`, `summary`, `published_at`) VALUES('2010-08-03 03:02:19', 'Requirements: Placebo or Panacea?', 'Abe', 'tag:google.com,2005:reader/item/35c70ad8da741ebd', '2010-08-03 03:02:19', 'http://www.abeheward.com/?p=33', NULL, '2010-08-01 21:15:43')[0m
+  [4;36;1mSQL (69.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mFeedEntry Load (0.4ms)[0m   [0mSELECT `feed_entries`.id FROM `feed_entries` WHERE (`feed_entries`.`guid` = 'tag:google.com,2005:reader/item/d281b4e2cd7b30e0') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeedEntry Create (0.3ms)[0m   [0mINSERT INTO `feed_entries` (`created_at`, `title`, `author`, `guid`, `updated_at`, `url`, `summary`, `published_at`) VALUES('2010-08-03 03:02:19', 'O melhor da semana 25/07 a 31/07', 'Fabrício Ferrari de Campos', 'tag:google.com,2005:reader/item/d281b4e2cd7b30e0', '2010-08-03 03:02:19', 'http://qualidadebr.wordpress.com/2010/08/01/o-melhor-da-semana-2507-a-3107/', NULL, '2010-08-01 18:26:40')[0m
+  [4;36;1mSQL (69.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mFeedEntry Load (0.8ms)[0m   [0mSELECT `feed_entries`.id FROM `feed_entries` WHERE (`feed_entries`.`guid` = 'tag:google.com,2005:reader/item/561d06490db3e714') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeedEntry Create (0.4ms)[0m   [0mINSERT INTO `feed_entries` (`created_at`, `title`, `author`, `guid`, `updated_at`, `url`, `summary`, `published_at`) VALUES('2010-08-03 03:02:19', 'Peaks are fun, but bit scary', 'noreply@blogger.com (Issi Hazan-Fuchs)', 'tag:google.com,2005:reader/item/561d06490db3e714', '2010-08-03 03:02:19', 'http://testermindset.blogspot.com/2010/08/peaks-are-fun-but-bit-scary.html', '<span style=\"color:purple;font-size:large\">Writer Meta Thoughts.</span><br><span style=\"color:black;font-size:small\">Last week was definitely a peak in my writing journey. On Sunday, an article of mine was accepted for print by \"Testing Experience\" magazine. On Tuesday, Pradeep Soundararajan mentioned my name among other \"Good thinkers and future experts\". I wrote a post on Wednesday, and on Thursday discovered that my site had a record number of visitors. A short investigation led me to the traffic source - The following Tweet by James Bach:</span><br><span style=\"font-size:small\"><span style=\"color:black\"><span style=\"color:blue\"><strong>jamesmarcusbach:</strong> Another new sapient testing blogger (avoids pat answers, critical self-analysis). I like this guy</span> <a href=\"http://bit.ly/dl042u\">http://bit.ly/dl042u</a></span> </span><br><span style=\"color:black;font-size:small\">Thank you, James!</span><br><span style=\"color:black;font-size:small\">What a week! No wonder, this week was also my Birthday week. While enjoying the compliments, a concern sneaks into mind - How do I maintain my reputation? The concern fades when I look down the path - remembering the journey I started a year and a half ago, daring to blog my first post and going from there, searching for my inner voice and improving my writing skills. Continuing the journey, looks less scary than taking the first step.</span><br><span style=\"color:black;font-size:small\">Here\'s to another year of new Insights and Peaks.</span><div><img width=\"1\" height=\"1\" src=\"https://blogger.googleusercontent.com/tracker/3295369038568507430-5760526875378638782?l=testermindset.blogspot.com\" alt=\"\"></div>', '2010-08-01 11:43:00')[0m
+  [4;36;1mSQL (70.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mFeedEntry Load (0.4ms)[0m   [0mSELECT `feed_entries`.id FROM `feed_entries` WHERE (`feed_entries`.`guid` = 'tag:google.com,2005:reader/item/4be731c3db50b74d') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeedEntry Create (0.6ms)[0m   [0mINSERT INTO `feed_entries` (`created_at`, `title`, `author`, `guid`, `updated_at`, `url`, `summary`, `published_at`) VALUES('2010-08-03 03:02:19', 'Screencast: Automate with VS 2010 Express, WebAii, MbUnit, &amp; C#', 'Brent Strange', 'tag:google.com,2005:reader/item/4be731c3db50b74d', '2010-08-03 03:02:19', 'http://www1.qainsight.net:8080/2010/08/01/ScreencastAutomateWithVS2010ExpressWebAiiMbUnitC.aspx', '<img style=\"padding-bottom:0px;border-right-width:0px;margin:0px;padding-left:0px;padding-right:0px;display:inline;float:right;border-top-width:0px;border-bottom-width:0px;border-left-width:0px;padding-top:0px\" src=\"http://qainsight.net/content/binary/WindowsLiveWriter/a875061bf54b_100B2/QAInsightScreencast_3.jpg\"> \n<p>\n<u><strong>Overview</strong>\n<br>\n</u>In this screencast I walk you through doing basic browser setup and automation\nusing a free technology stack: <a title=\"Visual Studio 2010 Express\" href=\"http://www.microsoft.com/express/web/\">Visual\nStudio 2010 Express</a>, the <a title=\"Free WebAii API\" href=\"http://www.telerik.com/products/web-testing-tools/webaii-framework-features.aspx\">WebAii\nTesting Framework</a> from <a title=\"telerik.com\" href=\"http://www.telerik.com/\">Telerik</a>, <a title=\"Visual C# Developer Center\" href=\"http://msdn.microsoft.com/en-us/vcsharp/default.aspx\">C#</a>,\nand <a title=\"Gallio with MbUnit testing\" href=\"http://www.gallio.org/\">MbUnit/Gallio</a>.\nWhy this stack you ask? Well, what I\'m showing you is a FREE, non-trial, stepping\nstone to help you do a proof a concept with some leading edge tools in .NET without\nforking out the money.\n</p>\n<p>\nOne thing that we struggle with in our department is helping those who are interested\nin doing automation explore the possibility while aligning with technologies the development\nteam is using. The problem is the initial cost of Microsoft\'s Visual Studio and Telerik\'s\nWebUi Test Studio (which uses the WebAii API) is far to much for somebody that is\njust tinkering (greater than $5000). This technology stack enables you to tinker,\nbut keep in mind you will be missing out on a LOT of features and productivity enablers\nthat come with the product that you pay for. For example with <a title=\"WebUI Test Studio Developer Edition\" href=\"http://www.telerik.com/automated-testing-tools/products/webui-test-studio-developer-edition.aspx\">WebUi\nTest Studio Developer Edition</a> you can get Visual Studio integration which gives\nrecording functionality (a huge productivity enabler) and with <a href=\"http://msdn.microsoft.com/en-us/vstudio/default.aspx\">Visual\nStudio Pro</a> the ability to use WebUI project templates, advanced debugging, etc.\nIdeally, once you\'ve proven out your POC for management you would be able to solicit\nfor the funds for the full product, which in turn would open up another world of collaboration\nand productivity.\n</p>\n<p>\n<u><strong>Download</strong></u>\n</p>\n<table border=\"0\" cellspacing=\"0\" cellpadding=\"2\" width=\"241\">\n<tbody>\n<tr>\n<td width=\"44\">\n<a href=\"http://www1.qainsight.net:8080/content/binary/WindowsLiveWriter/ScreencastBrowserCompatibilityRiskAnalys_52/WMV_Icon_2.png\"><img style=\"border-right-width:0px;border-top-width:0px;border-bottom-width:0px;border-left-width:0px\" border=\"0\" alt=\"WMV_Icon\" src=\"http://www1.qainsight.net:8080/content/binary/WindowsLiveWriter/ScreencastBrowserCompatibilityRiskAnalys_52/WMV_Icon_thumb.png\" width=\"32\" height=\"32\"></a> \n</td>\n<td width=\"51\">\n<a title=\"WMV Format\" href=\"http://qainsight.net/screencasts/VSExpress2010_WebAii_Demo.wmv\">WMV</a></td>\n<td width=\"35\">\n </td>\n<td width=\"38\">\n<a href=\"http://www1.qainsight.net:8080/content/binary/WindowsLiveWriter/ScreencastBrowserCompatibilityRiskAnalys_52/Ipod_icon_2.png\"><img style=\"border-right-width:0px;border-top-width:0px;border-bottom-width:0px;border-left-width:0px\" border=\"0\" alt=\"Ipod_icon\" src=\"http://www1.qainsight.net:8080/content/binary/WindowsLiveWriter/ScreencastBrowserCompatibilityRiskAnalys_52/Ipod_icon_thumb.png\" width=\"32\" height=\"32\"></a></td>\n<td width=\"71\">\n<a title=\"M4V Format\" href=\"http://www1.qainsight.net:8080/screencasts/VSExpress2010_WebAii_Demo.m4v\">iPod/iTunes</a></td>\n</tr>\n<tr>\n<td width=\"44\">\n<a href=\"http://www1.qainsight.net:8080/content/binary/WindowsLiveWriter/ScreencastBrowserCompatibilityRiskAnalys_52/Zune_icon_2.png\"><img style=\"border-right-width:0px;border-top-width:0px;border-bottom-width:0px;border-left-width:0px\" border=\"0\" alt=\"Zune_icon\" src=\"http://www1.qainsight.net:8080/content/binary/WindowsLiveWriter/ScreencastBrowserCompatibilityRiskAnalys_52/Zune_icon_thumb.png\" width=\"32\" height=\"32\"></a> \n</td>\n<td width=\"51\">\n<a title=\"WMV Format (320x240)\" href=\"http://qainsight.net/screencasts/VSExpress2010_WebAii_Demo_Zune.wmv\">Zune</a></td>\n<td width=\"34\">\n </td>\n<td width=\"41\">\n<a href=\"http://www1.qainsight.net:8080/content/binary/WindowsLiveWriter/ScreencastBrowserCompatibilityRiskAnalys_52/MP3_Icon_2.png\"><img style=\"border-right-width:0px;border-top-width:0px;border-bottom-width:0px;border-left-width:0px\" border=\"0\" alt=\"MP3_Icon\" src=\"http://www1.qainsight.net:8080/content/binary/WindowsLiveWriter/ScreencastBrowserCompatibilityRiskAnalys_52/MP3_Icon_thumb.png\" width=\"32\" height=\"32\"></a> \n</td>\n<td width=\"71\">\n<a title=\"MP3 format\" href=\"http://qainsight.net/screencasts/VSExpress2010_WebAii_Demo.mp3\">MP3</a></td>\n</tr>\n</tbody>\n</table>\n<img width=\"0\" height=\"0\" src=\"http://www1.qainsight.net:8080/aggbug.ashx?id=17b04da6-974e-4f08-9311-eb3fee98e4bf\">', '2010-08-01 08:41:00')[0m
+  [4;36;1mSQL (70.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mFeedEntry Load (0.4ms)[0m   [0mSELECT `feed_entries`.id FROM `feed_entries` WHERE (`feed_entries`.`guid` = 'tag:google.com,2005:reader/item/0640afe7f80a9ec3') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeedEntry Create (0.3ms)[0m   [0mINSERT INTO `feed_entries` (`created_at`, `title`, `author`, `guid`, `updated_at`, `url`, `summary`, `published_at`) VALUES('2010-08-03 03:02:19', 'EWT29 – Coherent ideas', 'mgaertne', 'tag:google.com,2005:reader/item/0640afe7f80a9ec3', '2010-08-03 03:02:19', 'http://weekendtesting.com/archives/1361', NULL, '2010-07-31 17:40:07')[0m
+  [4;36;1mSQL (63.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mFeedEntry Load (7.1ms)[0m   [0mSELECT `feed_entries`.id FROM `feed_entries` WHERE (`feed_entries`.`guid` = 'tag:google.com,2005:reader/item/e86729cad6f72b1d') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeedEntry Create (2.4ms)[0m   [0mINSERT INTO `feed_entries` (`created_at`, `title`, `author`, `guid`, `updated_at`, `url`, `summary`, `published_at`) VALUES('2010-08-03 03:02:19', 'Rob Lambert\'s Blog: July UKTMF', '(author unknown)', 'tag:google.com,2005:reader/item/e86729cad6f72b1d', '2010-08-03 03:02:19', 'http://feedproxy.google.com/~r/TheSocialTester/~3/IYG1btPMo4s/july-uktmf', '<p>\n	<p>A big thanks to Paul Gerrard and Susan Windsor for organising yesterdays UK Test Management Forum in London. Also a big thanks to the sponsors for the event; <a href=\"http://www.sqs-uk.com/\"><strong>SQS UK</strong></a>, <a href=\"http://www.origsoft.com/\"><strong>Original Software</strong></a> and <a href=\"http://www.tricentis.com/\">Tricentis Technology &amp; Consulting</a><p></p>It was a cracking turn out with about 100 people there. Great to see so many familiar faces but also lots of new faces too.<p></p>Paul started the afternoon with news of the merger between his company, <a href=\"http://gerrardconsulting.com/\">Gerrard Consulting</a>, and Susan Windsor\'s company, WMHL. They are keeping the Gerrard Consulting name and are looking to expand in to the main stage of the consulting world. They both talked about a new tool called <a href=\"http://testela.com/\">Testela</a> which sounded interesting. Looking forward to finding out more when it\'s released.</p>\n<p>BTW - Stephen Hill\'s blog is an excellent write up of the afternoon...<a href=\"http://pedantictester.wordpress.com/2010/07/28/uk-test-managers-forum-28-july-2010/\">here</a>, so I wont do any more other than to include some photos.</p>\n<p>There was a lot to agree with and a lot to disagree with about <a href=\"http://www.origsoft.com/\">Jonathan Pearson\'s</a> talk on \"The Dark Side of Application Quality Management Ten Black Holes to Avoid For Successful Application Delivery\" Some lively discussions took place around metrics and agile and many other topics. Jonathon also remained dressed as Obi Wan for the entire talk. Impressive. I must admit that their tool is looking increasingly like a tool capable of satisfying many needs within the testing community. It appears to be flexible, incredibly extensible and doesn\'t empose restrictions on how and what methodology or approach you can take. It\'s also got support for exploratory testing, which sounds very interesting indeed.</p>\n<p><a href=\"http://posterous.com/getfile/files.posterous.com/temp-2010-07-29/FptEFyIjctowBsvlGbftknoEeuciChagdqGvHJnlGjAwHhCCkmhJjlekfxrp/Jonathon.jpg.scaled1000.jpg\"><img src=\"http://posterous.com/getfile/files.posterous.com/temp-2010-07-29/FptEFyIjctowBsvlGbftknoEeuciChagdqGvHJnlGjAwHhCCkmhJjlekfxrp/Jonathon.jpg.scaled500.jpg\" width=\"500\" height=\"375\"></a>\nSecond up for me was <a href=\"http://www.secerno.com/\">James Wilson</a>. I worked with James many years ago and his topic of choice was very interesting. <strong>Why is testing in an Agile with Scrum environment hard? (And what can we do about it?)</strong></p>\n<p>It was one of the best discussions I\'ve had for a long time. The presentation essentially got hijacked but there were some interesting ideas put forward about how to run soak tests in short sprints and how to manage the quality of your release, when time and cost are fixed. Good stuff.</p>\n<p><a href=\"http://posterous.com/getfile/files.posterous.com/temp-2010-07-29/lCkdapoulCIcrmyyBolkqIkDHvjpjpeferpbiHJlIdugnnpmudoDkHcjEDtc/P1040396-1000.jpg.scaled1000.jpg\"><img src=\"http://posterous.com/getfile/files.posterous.com/temp-2010-07-29/lCkdapoulCIcrmyyBolkqIkDHvjpjpeferpbiHJlIdugnnpmudoDkHcjEDtc/P1040396-1000.jpg.scaled500.jpg\" width=\"500\" height=\"375\"></a>\n</p>\n<p>As usual, some after conference drinks :)</p>\n<p> </p>\n<p><a href=\"http://posterous.com/getfile/files.posterous.com/temp-2010-07-29/JGbcecFjbCpglIAbpmEfhegDoBIvzwCgAbdGyyvpqzJfyjgprIwtdjBCDfav/P1040403-1000.jpg.scaled1000.jpg\"><img src=\"http://posterous.com/getfile/files.posterous.com/temp-2010-07-29/JGbcecFjbCpglIAbpmEfhegDoBIvzwCgAbdGyyvpqzJfyjgprIwtdjBCDfav/P1040403-1000.jpg.scaled500.jpg\" width=\"500\" height=\"375\"></a>\n<a href=\"http://posterous.com/getfile/files.posterous.com/temp-2010-07-29/gjlGJcorzJkeHHxsdywbkqCglCDGecFjnIziudChHHcqBznzICwhxekFznId/P1040398-1000.jpg.scaled1000.jpg\"><img src=\"http://posterous.com/getfile/files.posterous.com/temp-2010-07-29/gjlGJcorzJkeHHxsdywbkqCglCDGecFjnIziudChHHcqBznzICwhxekFznId/P1040398-1000.jpg.scaled500.jpg\" width=\"500\" height=\"375\"></a>\n<a href=\"http://posterous.com/getfile/files.posterous.com/temp-2010-07-29/hEdFgIqotutCGjAsxwJsDtHjbDctEvbatCzECmHAewpujolfCyslhbzzbzwe/P1040400-1000.jpg.scaled1000.jpg\"><img src=\"http://posterous.com/getfile/files.posterous.com/temp-2010-07-29/hEdFgIqotutCGjAsxwJsDtHjbDctEvbatCzECmHAewpujolfCyslhbzzbzwe/P1040400-1000.jpg.scaled500.jpg\" width=\"500\" height=\"375\"></a>\n<a href=\"http://posterous.com/getfile/files.posterous.com/temp-2010-07-29/feFxdCqkuEpndtBnagxtpxdqwJEErwuzvEmvbsHJAfkcuBmmJppgDhjFGCJx/P1040402-1000.jpg.scaled1000.jpg\"><img src=\"http://posterous.com/getfile/files.posterous.com/temp-2010-07-29/feFxdCqkuEpndtBnagxtpxdqwJEErwuzvEmvbsHJAfkcuBmmJppgDhjFGCJx/P1040402-1000.jpg.scaled500.jpg\" width=\"500\" height=\"375\"></a>\n<div><a href=\"http://thesocialtester.posterous.com/july-uktmf\">See and download the full gallery on posterous</a></div></p>\n<p> </p>\n	\n</p>\n\n<p><a href=\"http://thesocialtester.posterous.com/july-uktmf\">Permalink</a> \n\n	| <a href=\"http://thesocialtester.posterous.com/july-uktmf#comment\">Leave a comment  »</a>\n\n</p><img src=\"http://feeds.feedburner.com/~r/TheSocialTester/~4/IYG1btPMo4s\" height=\"1\" width=\"1\">', '2010-07-29 20:16:00')[0m
+  [4;36;1mSQL (65.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mFeedEntry Load (0.4ms)[0m   [0mSELECT `feed_entries`.id FROM `feed_entries` WHERE (`feed_entries`.`guid` = 'tag:google.com,2005:reader/item/12ed17a9eb97e652') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeedEntry Create (0.6ms)[0m   [0mINSERT INTO `feed_entries` (`created_at`, `title`, `author`, `guid`, `updated_at`, `url`, `summary`, `published_at`) VALUES('2010-08-03 03:02:19', 'Não se limite', 'Fabrício Ferrari de Campos', 'tag:google.com,2005:reader/item/12ed17a9eb97e652', '2010-08-03 03:02:19', 'http://qualidadebr.wordpress.com/2010/07/31/nao-se-limite/', NULL, '2010-07-31 04:07:20')[0m
+  [4;36;1mSQL (71.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mFeedEntry Load (0.6ms)[0m   [0mSELECT `feed_entries`.id FROM `feed_entries` WHERE (`feed_entries`.`guid` = 'tag:google.com,2005:reader/item/2bfdded35354cb76') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeedEntry Create (0.4ms)[0m   [0mINSERT INTO `feed_entries` (`created_at`, `title`, `author`, `guid`, `updated_at`, `url`, `summary`, `published_at`) VALUES('2010-08-03 03:02:19', 'Two “Scoops” of “Bugs”', '(author unknown)', 'tag:google.com,2005:reader/item/2bfdded35354cb76', '2010-08-03 03:02:19', 'http://www.testingreflections.com/node/view/8650', 'I have often said something like “We found a hundred bugs!” Lots of people have heard me say it. Statements like that are very valuable to me. But we should ask some vital questions about them.Consider Raisin Bran cereal. If you lived in America and weren’t in solitary confinement during the 80’s an 90’s you [...]', '2010-07-31 03:00:11')[0m
+  [4;36;1mSQL (67.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mFeedEntry Load (0.5ms)[0m   [0mSELECT `feed_entries`.id FROM `feed_entries` WHERE (`feed_entries`.`guid` = 'tag:google.com,2005:reader/item/30764d629331c780') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeedEntry Create (0.3ms)[0m   [0mINSERT INTO `feed_entries` (`created_at`, `title`, `author`, `guid`, `updated_at`, `url`, `summary`, `published_at`) VALUES('2010-08-03 03:02:20', 'Two “Scoops” of “Bugs”', 'James Bach', 'tag:google.com,2005:reader/item/30764d629331c780', '2010-08-03 03:02:20', 'http://www.satisfice.com/blog/archives/483', NULL, '2010-07-31 02:52:11')[0m
+  [4;36;1mSQL (63.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mFeedEntry Load (0.4ms)[0m   [0mSELECT `feed_entries`.id FROM `feed_entries` WHERE (`feed_entries`.`guid` = 'tag:google.com,2005:reader/item/9e762e72eb4d1c53') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeedEntry Create (0.4ms)[0m   [0mINSERT INTO `feed_entries` (`created_at`, `title`, `author`, `guid`, `updated_at`, `url`, `summary`, `published_at`) VALUES('2010-08-03 03:02:20', 'How To Reproduce Bugs', 'Joe Strazzere', 'tag:google.com,2005:reader/item/9e762e72eb4d1c53', '2010-08-03 03:02:20', 'http://www.softwaretestingclub.com/xn/detail/751045:Topic:89227', NULL, '2010-07-30 16:30:01')[0m
+  [4;36;1mSQL (62.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mFeedEntry Load (0.4ms)[0m   [0mSELECT `feed_entries`.id FROM `feed_entries` WHERE (`feed_entries`.`guid` = 'tag:google.com,2005:reader/item/6f4ce8ba48f994a4') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeedEntry Create (0.4ms)[0m   [0mINSERT INTO `feed_entries` (`created_at`, `title`, `author`, `guid`, `updated_at`, `url`, `summary`, `published_at`) VALUES('2010-08-03 03:02:20', 'How can I do to execute the same automated test in differents clients databases?', 'Matías Reina', 'tag:google.com,2005:reader/item/6f4ce8ba48f994a4', '2010-08-03 03:02:20', 'http://www.softwaretestingclub.com/xn/detail/751045:Topic:89218', NULL, '2010-07-30 16:10:30')[0m
+  [4;36;1mSQL (67.7ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:10:19) [GET]
+
+ActionView::MissingTemplate (Missing template home/index.erb in view path app/views):
+  app/controllers/home_controller.rb:4:in `index'
+  haml (3.0.15) rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:11:32) [GET]
+Rendering home/index
+Completed in 77ms (View: 63, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:13:22) [GET]
+  [4;36;1mFeedEntry Load (0.6ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 29ms (View: 18, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:13:33) [GET]
+  [4;36;1mFeedEntry Load (1.8ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 59ms (View: 31, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:15:23) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering home/index
+  [4;35;1mFeedEntry Columns (6.5ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 32ms (View: 10, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:15:32) [GET]
+  [4;36;1mFeedEntry Load (2.5ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 40ms (View: 20, DB: 4) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:21:07) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 19ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:21:10) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 24ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:23:58) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+
+ActionView::TemplateError (The line was indented 3 levels deeper than the previous line.) on line #10 of app/views/layouts/application.html.haml:
+7:     != include_stylesheets :style
+8: 
+9:   %body
+10:         = yield
+11: 
+12:         %p#credit
+13:           <strong>Website por:</strong> #{link_to "Fabrício Ferrari de Campos", "http://twitter.com/fabricioffc"}.
+
+    app/views/layouts/application.html.haml:10
+    haml (3.0.15) lib/haml/precompiler.rb:181:in `precompile'
+    haml (3.0.15) lib/haml/engine.rb:121:in `initialize'
+    haml (3.0.15) rails/./lib/haml/template/plugin.rb:29:in `new'
+    haml (3.0.15) rails/./lib/haml/template/plugin.rb:29:in `compile'
+    haml (3.0.15) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.15) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/home_controller.rb:5:in `index'
+    haml (3.0.15) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (90.8ms)
+Rendered rescues/_request_and_response (6.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:25:32) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+
+ActionView::TemplateError (undefined method `include_stylesheets' for #<ActionView::Base:0xb6327678>) on line #7 of app/views/layouts/application.html.haml:
+4:     %meta(charset='utf-8')
+5:     %title News Suite
+6: 
+7:     != include_stylesheets :style
+8: 
+9:   %body
+10:     = yield
+
+    app/views/layouts/application.html.haml:7:in `_run_haml_app47views47layouts47application46html46haml'
+    haml (3.0.15) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.15) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/home_controller.rb:5:in `index'
+    haml (3.0.15) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (265.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:25:59) [GET]
+  [4;36;1mFeedEntry Load (2.9ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+
+ActionView::TemplateError (undefined method `include_stylesheets' for #<ActionView::Base:0xb6491dd8>) on line #7 of app/views/layouts/application.html.haml:
+4:     %meta(charset='utf-8')
+5:     %title News Suite
+6: 
+7:     = include_stylesheets :style
+8: 
+9:   %body
+10:     = yield
+
+    app/views/layouts/application.html.haml:7:in `_run_haml_app47views47layouts47application46html46haml'
+    haml (3.0.15) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.15) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/home_controller.rb:5:in `index'
+    haml (3.0.15) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (102.2ms)
+Rendered rescues/_request_and_response (2.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:27:04) [GET]
+  [4;36;1mFeedEntry Load (5.6ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+
+ActionView::TemplateError (No expansion found for :style) on line #7 of app/views/layouts/application.html.haml:
+4:     %meta(charset='utf-8')
+5:     %title News Suite
+6: 
+7:     = stylesheet_link_tag :style, :cache => true
+8: 
+9:   %body
+10:     = yield
+
+    app/views/layouts/application.html.haml:7:in `_run_haml_app47views47layouts47application46html46haml'
+    haml (3.0.15) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.15) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/home_controller.rb:5:in `index'
+    haml (3.0.15) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (424.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:27:12) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 40ms (View: 19, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:28:52) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 58ms (View: 43, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:30:07) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 22ms (View: 9, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:30:10) [GET]
+  [4;36;1mFeedEntry Load (0.4ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 39ms (View: 19, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:30:50) [GET]
+  [4;36;1mFeedEntry Load (3.0ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 56ms (View: 19, DB: 5) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:31:54) [GET]
+  [4;36;1mFeedEntry Load (7.5ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 175ms (View: 7, DB: 9) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:33:27) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 30ms (View: 11, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:34:24) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 24ms (View: 13, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:34:35) [GET]
+  [4;36;1mFeedEntry Load (1.5ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 48ms (View: 10, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:35:11) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 21ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:35:41) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 29ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:36:10) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 26ms (View: 12, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:36:47) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 38ms (View: 12, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:38:03) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 58ms (View: 38, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:40:15) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 40ms (View: 28, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:40:22) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 21ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:40:24) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 21ms (View: 6, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:40:25) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 30ms (View: 9, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:40:34) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 31ms (View: 12, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:43:34) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (5.9ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 44ms (View: 24, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:43:35) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (9.1ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 53ms (View: 7, DB: 10) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:44:11) [GET]
+  [4;36;1mFeedEntry Load (0.5ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 30ms (View: 9, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:44:44) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 17ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:45:07) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 37ms (View: 21, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:46:01) [GET]
+  [4;36;1mFeedEntry Load (0.5ms)[0m   [0;1mSELECT * FROM `feed_entries` LIMIT 10[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 22ms (View: 6, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:54:14) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` LIMIT 10[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 21ms (View: 6, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:55:32) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` LIMIT 10[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 22ms (View: 6, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:58:15) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` LIMIT 10[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 34ms (View: 18, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:59:09) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` LIMIT 10[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 30ms (View: 10, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 00:59:47) [GET]
+  [4;36;1mFeedEntry Load (6.6ms)[0m   [0;1mSELECT * FROM `feed_entries` LIMIT 10[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (4.1ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 30ms (View: 7, DB: 11) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 01:02:19) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` LIMIT 10[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 175ms (View: 160, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 01:05:29) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` LIMIT 10[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 26ms (View: 12, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 01:05:49) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` LIMIT 10[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 20ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 01:07:21) [GET]
+  [4;36;1mFeedEntry Load (2.8ms)[0m   [0;1mSELECT * FROM `feed_entries` LIMIT 10[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 27ms (View: 5, DB: 4) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 01:14:34) [GET]
+  [4;36;1mFeedEntry Load (0.8ms)[0m   [0;1mSELECT * FROM `feed_entries` LIMIT 10[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (4.5ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 52ms (View: 27, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 01:15:22) [GET]
+  [4;36;1mFeedEntry Load (3.8ms)[0m   [0;1mSELECT * FROM `feed_entries` LIMIT 10[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 30ms (View: 7, DB: 5) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 01:15:58) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` LIMIT 10[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (3.4ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 36ms (View: 10, DB: 4) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 01:19:35) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` LIMIT 10[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 23ms (View: 11, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 01:19:55) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` LIMIT 10[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 26ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 01:21:05) [GET]
+  [4;36;1mFeedEntry Load (2.1ms)[0m   [0;1mSELECT * FROM `feed_entries` LIMIT 10[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 45ms (View: 20, DB: 3) | 200 OK [http://localhost/]

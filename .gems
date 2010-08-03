@@ -1,2 +1,2 @@
 haml --version 3.0.15
-pauldix-feedzirra --version 0.0.18
+pauldix-feedzirra --version 0.0.18 --source gems.github.com

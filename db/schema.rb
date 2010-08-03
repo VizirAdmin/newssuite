@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(:version => 20100803025239) do
   create_table "feed_entries", :force => true do |t|
     t.string   "title"
     t.string   "author"
-    t.string   "summary"
+    t.text     "summary"
     t.string   "url"
     t.datetime "published_at"
     t.string   "guid"

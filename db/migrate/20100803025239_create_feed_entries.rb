@@ -3,7 +3,7 @@ class CreateFeedEntries < ActiveRecord::Migration
     create_table :feed_entries do |t|
       t.string :title
       t.string :author
-      t.string :summary
+      t.text :summary
       t.string :url
       t.datetime :published_at
       t.string :guid
@@ -16,3 +16,4 @@ class CreateFeedEntries < ActiveRecord::Migration
     drop_table :feed_entries
   end
 end
+

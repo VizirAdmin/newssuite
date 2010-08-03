@@ -6,6 +6,7 @@ Rails::Initializer.run do |config|
 
   config.gem 'pauldix-feedzirra',:lib => 'feedzirra',:source => 'http://gems.github.com',:version => '0.0.18'
   config.gem 'haml',:version => '3.0.15'
+  config.gem 'will_paginate', :version => '2.3.11', :source => 'http://gemcutter.org'
   config.time_zone = 'UTC'
 
 end

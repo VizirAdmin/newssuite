@@ -7,8 +7,21 @@ body {
   margin:0px;
 }
 
+#header {
+  float:left;
+  margin:-20px 0 15px 25px;
+  background-image:url("/images/logo.gif");
+  background-repeat:no-repeat;
+  display:block;
+  height:200px;
+  overflow:hidden;
+  width:500px;
+  z-index:99;
+  position:absolute;
+}
+
 #news {
-  margin:0 30%;
+  margin:3% 30%;
   clear:both;
   display:block;
 }
@@ -37,6 +50,13 @@ body {
   font-style:italic;
   font-family: ‘Courier New’, Courier, monospace;
 }
+
+.pagination {margin:2% 0; font-size:12px; text-align:center;}
+.pagination a { padding: 2px 5px 2px 5px; margin: 2px; text-decoration: none; color: #EAE8E9;}
+.pagination a:hover,
+.pagination a:active {color: #23AEBB; }
+.pagination span.current { padding: 2px 5px 2px 5px; margin: 2px; font-weight: bold; color: #79e4ff;}
+.pagination span.disabled { padding: 2px 5px 2px 5px; margin: 2px; color: #ddd; }
 
 #credit {
   background:url("/images/credits_border.png") repeat-x scroll center top transparent;

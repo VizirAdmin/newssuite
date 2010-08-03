@@ -1,10 +1,11 @@
-%h4 Últimas notícias sobre Teste e Qualidade de Software
-
 #news
   - @feed_entries.each do |entry|
     .title
       = link_to entry.title, entry.url
     .author
-      = "Escrito por #{entry.author}"
+      = "Escrito por #{entry.author} em #{entry.published_at.strftime("%d/%m/%Y")}"
     %br
+
+.pagination
+  = will_paginate @feed_entries, :previous_label  => "Anterior", :next_label => "Próxima"
 

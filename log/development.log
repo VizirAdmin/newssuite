@@ -1263,3 +1263,68 @@ Rendering template within layouts/application
 Rendering home/index
   [4;35;1mFeedEntry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
 Completed in 28ms (View: 16, DB: 2) | 200 OK [http://localhost/?page=1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 03:10:36) [GET]
+  [4;36;1mFeedEntry Load (2.2ms)[0m   [0;1mSELECT title,author,url,published_at FROM `feed_entries` ORDER BY published_at DESC[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (8.6ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+
+ActionView::TemplateError (undefined method `formatted_articles_url' for #<ActionView::Base:0xb6fbbd30>) on line #11 of app/views/home/index.html.haml:
+8: 
+9: .pagination
+10:   = will_paginate @feed_entries, :previous_label  => "Anterior", :next_label => "Próxima"
+11: = link_to "RSS Feed", formatted_articles_url(:rss)
+
+    app/views/home/index.html.haml:11:in `_run_haml_app47views47home47index46html46haml'
+    haml (3.0.15) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.15) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/home_controller.rb:5:in `index'
+    haml (3.0.15) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (84.3ms)
+Rendered rescues/_request_and_response (4.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 03:18:28) [GET]
+  [4;36;1mFeedEntry Load (2.9ms)[0m   [0;1mSELECT title,author,url,published_at FROM `feed_entries` ORDER BY published_at DESC[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (5.8ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 60ms (View: 35, DB: 9) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 03:19:06) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT title,author,url,published_at FROM `feed_entries` ORDER BY published_at DESC[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 17ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-03 03:20:02) [GET]
+  [4;36;1mFeedEntry Load (4.8ms)[0m   [0;1mSELECT title,author,url,published_at FROM `feed_entries` ORDER BY published_at DESC[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 32ms (View: 10, DB: 6) | 200 OK [http://localhost/]

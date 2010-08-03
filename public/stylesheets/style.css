@@ -9,7 +9,7 @@ body {
 
 #header {
   float:left;
-  margin:-20px 0 15px 25px;
+  margin:20px 0 15px 10px;
   background-image:url("/images/logo.gif");
   background-repeat:no-repeat;
   display:block;
@@ -21,9 +21,10 @@ body {
 }
 
 #news {
-  margin:3% 30%;
   clear:both;
-  display:block;
+  display:inline-block;
+  margin-left:45%;
+  margin-top:2%;
 }
 
 #news .title {
@@ -62,7 +63,7 @@ body {
   background:url("/images/credits_border.png") repeat-x scroll center top transparent;
   text-align:center;
   font-size:12px;
-  margin:0 30% 0;
+  margin:0 25%;
   padding-top:15px;
 }
 

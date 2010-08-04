@@ -1,7 +1,7 @@
 class FeedEntry < ActiveRecord::Base
 
   def self.update_from_feed
-    feed = Feedzirra::Feed.fetch_and_parse("http://www.google.com/reader/public/atom/user%2F13996845518381598850%2Fbundle%2FTeste%20e%20Qualidade%20de%20Software")
+    feed = Feedzirra::Feed.fetch_and_parse("http://www.google.com/reader/public/atom/user%2F13996845518381598850%2Fbundle%2FNews%20Suite")
     add_entries(feed.entries)
   end
 

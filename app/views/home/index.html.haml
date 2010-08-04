@@ -5,5 +5,5 @@
     .author
       = "Escrito por #{entry.author} em #{entry.published_at.strftime("%d/%m/%Y")}"
     %br
-= will_paginate @feed_entries, :previous_label  => "Anterior", :next_label => "Próxima"
+  = will_paginate @feed_entries, :previous_label  => "Anterior", :next_label => "Próxima"
 

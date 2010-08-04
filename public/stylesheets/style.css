@@ -20,10 +20,19 @@ body {
   width:350px;
 }
 
+#rss {
+  background-image:url("/images/rss.png");
+  background-repeat:no-repeat;
+  display:inline-block;
+  height:65px;
+  margin-left:-50px;
+  overflow:hidden;
+  width:65px;
+}
+
 #news {
   margin-left:auto;
   margin-right:auto;
-  padding-top:2%;
   text-align:center;
   display:table;
   max-width:500px;
@@ -32,9 +41,6 @@ body {
 #news .title {
   text-align:right;
   border-bottom:1px solid #838383;
-/*
-  background:#79e4ff;
-*/
 }
 
 #news a {

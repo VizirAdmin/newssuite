@@ -2590,3 +2590,259 @@ Rendering template within layouts/application
 Rendering home/index
   [4;35;1mFeedEntry Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
 Completed in 54ms (View: 26, DB: 4) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-04 02:12:23) [GET]
+  [4;36;1mFeedEntry Load (2.0ms)[0m   [0;1mSELECT title,author,url,published_at FROM `feed_entries` ORDER BY published_at DESC[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 49ms (View: 25, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-04 02:17:22) [GET]
+  Parameters: {"page"=>"3"}
+  [4;36;1mFeedEntry Load (4.2ms)[0m   [0;1mSELECT title,author,url,published_at FROM `feed_entries` ORDER BY published_at DESC[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 39ms (View: 18, DB: 6) | 200 OK [http://localhost/?page=3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-04 02:17:23) [GET]
+  Parameters: {"page"=>"4"}
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT title,author,url,published_at FROM `feed_entries` ORDER BY published_at DESC[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (6.3ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 42ms (View: 16, DB: 7) | 200 OK [http://localhost/?page=4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-04 02:17:25) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT title,author,url,published_at FROM `feed_entries` ORDER BY published_at DESC[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (6.8ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 52ms (View: 19, DB: 7) | 200 OK [http://localhost/?page=2]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-04 02:17:27) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mFeedEntry Load (4.2ms)[0m   [0;1mSELECT title,author,url,published_at FROM `feed_entries` ORDER BY published_at DESC[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 38ms (View: 16, DB: 7) | 200 OK [http://localhost/?page=1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-04 02:17:49) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT title,author,url,published_at FROM `feed_entries` ORDER BY published_at DESC[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 22ms (View: 9, DB: 2) | 200 OK [http://localhost/?page=1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-04 02:17:52) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mFeedEntry Load (7.0ms)[0m   [0;1mSELECT title,author,url,published_at FROM `feed_entries` ORDER BY published_at DESC[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 52ms (View: 20, DB: 8) | 200 OK [http://localhost/?page=2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-04 02:17:55) [GET]
+  Parameters: {"page"=>"3"}
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT title,author,url,published_at FROM `feed_entries` ORDER BY published_at DESC[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 21ms (View: 11, DB: 1) | 200 OK [http://localhost/?page=3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-04 02:17:57) [GET]
+  Parameters: {"page"=>"4"}
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT title,author,url,published_at FROM `feed_entries` ORDER BY published_at DESC[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 23ms (View: 9, DB: 1) | 200 OK [http://localhost/?page=4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-04 02:18:09) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT title,author,url,published_at FROM `feed_entries` ORDER BY published_at DESC[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 28ms (View: 14, DB: 2) | 200 OK [http://localhost/?page=1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-04 02:18:13) [GET]
+  Parameters: {"page"=>"4"}
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT title,author,url,published_at FROM `feed_entries` ORDER BY published_at DESC[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 35ms (View: 12, DB: 3) | 200 OK [http://localhost/?page=4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-04 02:18:15) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT title,author,url,published_at FROM `feed_entries` ORDER BY published_at DESC[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 26ms (View: 9, DB: 1) | 200 OK [http://localhost/?page=1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-04 02:20:54) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT title,author,url,published_at FROM `feed_entries` ORDER BY published_at DESC[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 53ms (View: 26, DB: 2) | 200 OK [http://localhost/?page=1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-04 02:21:21) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mFeedEntry Load (4.0ms)[0m   [0;1mSELECT title,author,url,published_at FROM `feed_entries` ORDER BY published_at DESC[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 46ms (View: 24, DB: 7) | 200 OK [http://localhost/?page=1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-04 02:21:56) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mFeedEntry Load (5.4ms)[0m   [0;1mSELECT title,author,url,published_at FROM `feed_entries` ORDER BY published_at DESC[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 49ms (View: 29, DB: 7) | 200 OK [http://localhost/?page=1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-04 02:23:20) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mFeedEntry Load (3.7ms)[0m   [0;1mSELECT title,author,url,published_at FROM `feed_entries` ORDER BY published_at DESC[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 49ms (View: 25, DB: 5) | 200 OK [http://localhost/?page=1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-04 02:23:32) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mFeedEntry Load (4.1ms)[0m   [0;1mSELECT title,author,url,published_at FROM `feed_entries` ORDER BY published_at DESC[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 47ms (View: 20, DB: 5) | 200 OK [http://localhost/?page=1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-04 02:23:42) [GET]
+  [4;36;1mFeedEntry Load (7.5ms)[0m   [0;1mSELECT title,author,url,published_at FROM `feed_entries` ORDER BY published_at DESC[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (3.5ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 48ms (View: 16, DB: 11) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-04 02:23:54) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT title,author,url,published_at FROM `feed_entries` ORDER BY published_at DESC[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 51ms (View: 35, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-04 02:24:25) [GET]
+  [4;36;1mFeedEntry Load (0.4ms)[0m   [0;1mSELECT title,author,url,published_at FROM `feed_entries` ORDER BY published_at DESC[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 51ms (View: 30, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-04 02:24:38) [GET]
+  [4;36;1mFeedEntry Load (5.1ms)[0m   [0;1mSELECT title,author,url,published_at FROM `feed_entries` ORDER BY published_at DESC[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 53ms (View: 29, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index to rss (for 127.0.0.1 at 2010-08-04 02:24:48) [GET]
+  [4;36;1mFeedEntry Load (3.6ms)[0m   [0;1mSELECT title,author,url,published_at FROM `feed_entries` ORDER BY published_at DESC[0m
+  [4;35;1mFeedEntry Load (0.7ms)[0m   [0mSELECT * FROM `feed_entries` ORDER BY published_at DESC LIMIT 10[0m
+Rendering home/index
+  [4;36;1mFeedEntry Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 108ms (View: 85, DB: 7) | 200 OK [http://localhost/feed]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index to rss (for 127.0.0.1 at 2010-08-04 02:25:06) [GET]
+  [4;35;1mFeedEntry Load (5.9ms)[0m   [0mSELECT title,author,url,published_at FROM `feed_entries` ORDER BY published_at DESC[0m
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `feed_entries` ORDER BY published_at DESC LIMIT 10[0m
+Rendering home/index
+  [4;35;1mFeedEntry Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 100ms (View: 75, DB: 8) | 200 OK [http://localhost/feed]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index to rss (for 127.0.0.1 at 2010-08-04 02:25:20) [GET]
+  [4;36;1mFeedEntry Load (0.2ms)[0m   [0;1mSELECT title,author,url,published_at FROM `feed_entries` ORDER BY published_at DESC[0m
+  [4;35;1mFeedEntry Load (3.7ms)[0m   [0mSELECT * FROM `feed_entries` ORDER BY published_at DESC LIMIT 10[0m
+Rendering home/index
+  [4;36;1mFeedEntry Columns (29.0ms)[0m   [0;1mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 239ms (View: 187, DB: 33) | 200 OK [http://localhost/feed]

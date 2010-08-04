@@ -9,17 +9,22 @@ private
 
   def self.add_entries(entries)
     entries.each do |entry|
+      summary = create_summary(entry)
       unless exists? :guid => entry.id
         create!(
           :title        => entry.title,
           :author       => entry.author,
-          :summary      => entry.summary,
+          :summary      => summary,
           :url          => entry.url,
           :published_at => entry.published,
           :guid         => entry.id
         )
       end
     end
+  end
+  
+  def self.create_summary(entry)
+    "Escrito por <i>#{entry.author}</i>. Confira em:<br> <a href=\"#{entry.url}\">#{entry.title}</a>"
   end
 
 end

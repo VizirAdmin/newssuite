@@ -3113,3 +3113,33 @@ Completed in 38ms (View: 14, DB: 4) | 200 OK [http://localhost/]
   [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
   [4;35;1mFeedEntry Create (1.0ms)[0m   [0mINSERT INTO `feed_entries` (`created_at`, `title`, `author`, `guid`, `updated_at`, `url`, `summary`, `published_at`) VALUES('2010-08-04 15:43:23', 'O melhor da semana 18/07 a 24/07', 'Fabrício Ferrari de Campos', 'tag:google.com,2005:reader/item/ef6541edf0cd2846', '2010-08-04 15:43:23', 'http://qualidadebr.wordpress.com/2010/07/26/o-melhor-da-semana-1807-a-2407/', 'Escrito por Fabrício Ferrari de Campos. Confira em:<br> <a href=\"http://qualidadebr.wordpress.com/2010/07/26/o-melhor-da-semana-1807-a-2407/\">O melhor da semana 18/07 a 24/07</a>', '2010-07-26 05:33:52')[0m
   [4;36;1mSQL (46.5ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (43.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-08 00:55:12) [GET]
+  [4;36;1mFeedEntry Load (139.9ms)[0m   [0;1mSELECT title,author,url,published_at FROM `feed_entries` ORDER BY published_at DESC[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (76.3ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 430ms (View: 175, DB: 262) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-08 00:55:45) [GET]
+  [4;36;1mFeedEntry Load (0.4ms)[0m   [0;1mSELECT title,author,url,published_at FROM `feed_entries` ORDER BY published_at DESC[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (25.2ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 93ms (View: 37, DB: 26) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-08 00:56:42) [GET]
+  [4;36;1mFeedEntry Load (0.7ms)[0m   [0;1mSELECT title,author,url,published_at FROM `feed_entries` ORDER BY published_at DESC[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mFeedEntry Columns (10.6ms)[0m   [0mSHOW FIELDS FROM `feed_entries`[0m
+Completed in 45ms (View: 25, DB: 12) | 200 OK [http://localhost/]

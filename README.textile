@@ -1,0 +1,10 @@
+h1. #News Suite
+
+h2. Mantenedor
+
+* Fabrício Campos ("github.com/FabricioFFC":http://github.com/FabricioFFC)
+
+h2. Como colaborar
+
+Se você deseja colaborar, você pode criar um fork, realizar as suas modificações e submiter uma requisão de pull :)
+

@@ -6,15 +6,19 @@
 
     = stylesheet_link_tag :all, :cache => true
 
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+
   %body
-    #header
-    %a{:href =>"http://feeds.feedburner.com/NewsSuite", :title => "Assine o RSS", :alt => "Assine o RSS", :target => "_blank"}
-      #rss
-    = yield
+    #left_column
+      #header
+      %a{:href =>"http://feeds.feedburner.com/NewsSuite", :title => "Assine o RSS", :alt => "Assine o RSS", :target => "_blank"}
+        #rss
+    #main_column
+      = yield
 
     #credit
       %p
-        <strong>Um projeto <i>open source</i> desenvolvido por:</strong> #{link_to "Fabrício Ferrari de Campos", "http://twitter.com/fabricioffc"}.
+        <strong>Um projeto #{link_to "<i>open source</i>", "https://github.com/Vizir/newssuite", :target => "_blank"} desenvolvido por:</strong> #{link_to "Fabrício Ferrari de Campos", "http://twitter.com/fabricioffc", :target => "_blank"}.
 
-      <strong>Uma iniciativa do time do</strong> #{link_to "Vizir", "http://www.vizir.com.br/"}.
+      <strong>Uma iniciativa do time do</strong> #{link_to "Vizir", "http://www.vizir.com.br/", :target => "_blank"}.
 

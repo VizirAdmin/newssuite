@@ -1,7 +1,7 @@
 #news
   - @feed_entries.each do |entry|
     .title
-      = link_to entry.title, entry.url
+      = link_to entry.title, entry.url, :target => "_blank"
     .author
       = "Escrito por #{entry.author} em #{entry.published_at.strftime("%d/%m/%Y")}"
     %br
